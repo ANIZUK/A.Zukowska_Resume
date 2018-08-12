@@ -1,0 +1,122 @@
+ /* ====================================
+  Navigation-wrapper 
+  ==================================== */
+  .navigation-wrapper {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    height: 100%;
+    width: 80vw;
+    // left: calc(-40vw + 50%);
+    // right: calc(-40vw + 50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-100%); 
+  }
+  
+  .menu-slide-down {
+    transition: all .8s ease-in-out;
+    transform: translateY(0); 
+  }
+  
+  .menu-slide-up {
+    transition: all .8s ease-in-out;
+    transform: translateY(-100%); 
+  }
+  
+  nav,
+  nav ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none; 
+    li {
+      flex-basis: 10%;
+      justify-content: center;
+      overflow: hidden;
+      margin-right: 10px;
+      transform: translateY(-100%); 
+    }
+    a {
+      position: relative;
+      top: 10%;
+      color: 	rgb(78, 75, 99);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-size: 0.9rem; 
+    }
+  }
+
+
+  nav li:nth-of-type(1){
+    margin-right: 35vw;
+  }
+  nav li:nth-of-type(2),
+  nav li:nth-of-type(3),
+  nav li:nth-of-type(4),
+  nav li:nth-of-type(5){
+    background-color: white;
+    background-image: url('../images/zuczek.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  nav li:nth-of-type(2){
+    background-position-y: 40vh;
+    background-position-x: -9vw;
+  }        
+  nav li:nth-of-type(3){
+    background-position-y: 40vh;
+    background-position-x: -17vw;       
+  }
+  nav li:nth-of-type(4){
+    background-position-y: 40vh;
+    background-position-x: -25vw;     
+  }
+  nav li:nth-of-type(5){
+    background-position-y: 40vh;
+    background-position-x: -33vw;      
+  }
+// *====================================
+// Animation SLIDE-IN
+// ==================================== */
+
+.slide-in-nav-item {
+    animation: slide-in-nav-item 1s ease both;
+  }
+  
+  
+  .slide-in-nav-item-reverse {
+    animation: slide-in-nav-item-reverse 1s ease both;
+  }
+  
+
+@keyframes slide-in-nav-item {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%)
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+    }
+  }
+  
+  @keyframes slide-in-nav-item-reverse {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%)
+    }
+  }

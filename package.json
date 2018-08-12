@@ -1,0 +1,22 @@
+{
+  "name": "rwd_sass",
+  "version": "1.0.0",
+  "description": "<img alt=\"Logo\" src=\"http://coderslab.pl/svg/logo-coderslab.svg\" width=\"400\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "node_modules/.bin/gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.1",
+    "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.2.2",
+    "scrollmagic": "^2.0.5"
+  }
+}

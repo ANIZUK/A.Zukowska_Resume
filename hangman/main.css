@@ -1,0 +1,39 @@
+#game_wrapper{
+	width: 70vw;
+	margin: 0 auto;
+	text-align: center;
+	background-color: rgb(178, 178, 240);
+}
+#word{
+	font-size: 30px;
+
+}
+
+#alphabet span:hover {
+	cursor: pointer;
+	background-color: #ccc;
+  }
+  
+  #alphabet span {
+	margin: 5px;
+	display: inline-block;
+	width: 30px;
+	/* height:30px; */
+	border: 1px solid black;
+	background-color: rgb(117, 117, 194);
+	border-radius:5px;
+	text-align: center;
+	padding: 25px;
+  }
+  
+  .button {
+	font-size: 17px;
+	width: 100px;
+	margin: auto;
+	margin-top: 20px;
+	cursor: pointer;
+	border: solid 1px white;
+	border-radius: 4px;
+	text-align: center;
+	color: #fff;
+  }

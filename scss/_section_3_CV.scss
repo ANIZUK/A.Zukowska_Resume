@@ -1,0 +1,86 @@
+ /* ====================================
+  Section-3: CV
+  ==================================== */
+.section-3{
+    background-image: url('../images/beetle_green.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+    background-attachment: fixed; 
+    height: 100vh;
+    .CV_wrapper{
+        height: 100%;
+        width:50%;
+        margin-top: 100px;
+        margin-left:15%;
+        [class*=col-] {
+            height: 0%;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            background-color: #fafafa;
+            margin-bottom: 5px;
+            &:hover{
+                background-color: rgb(44, 138, 44);
+            }    
+        }
+// background       
+        .col-1 {background-image: url('../images/section-3/open-book.svg');}    
+        .col-2 {background-image: url('../images/section-3/hiring.svg');}   
+        .col-3 {background-image: url('../images/section-3/user.svg');}
+        .col-4 {background-image: url('../images/section-3/heart.svg');}
+        [class*=col-] {
+            background-size: 10%;
+            background-repeat: no-repeat; 
+            background-position: 5% 50%; 
+            display: flex;
+            justify-content: center;
+            transition:1s;
+            opacity:0;
+            filter:drop-shadow(-2px 2px 2px gray);
+            animation: skew 2s infinite;
+            animation-direction: alternate;          
+            h1 {
+                align-self: center;
+                font-size: calc(1vh + 1vw);
+                text-align: center;   
+                cursor: pointer;
+                transition: transform 0.4s; 
+                &:hover{
+                    transform: scale(1.1);
+                }
+            } 
+        }
+    }
+    .CV_wrapper.show {   
+        [class*=col-]{
+            opacity:1;
+            height: 15%;
+        }
+    }
+
+}
+
+@keyframes skew {
+    0% {
+      transform: skewX(2deg);
+    }
+    100% {
+      transform: skewX(-2deg);
+    }
+  }
+
+    /* ====================================
+ Section-3-education - media-query
+  ==================================== */
+
+  @media screen and (max-width: 992px) {
+    [class*=col-] {
+        margin-left: -13%;
+    }
+
+    
+   }
+ 
+
+
+

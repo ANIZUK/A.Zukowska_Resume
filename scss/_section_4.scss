@@ -1,0 +1,197 @@
+ /* ====================================
+  Section-4: Contact & footer
+  ==================================== */
+#section-4{
+    @include container;
+    height:100vh;
+    overflow: hidden;
+}
+.space{
+    margin-bottom: 50px;
+}
+
+.phone_main_wrapper,
+.e-mail_main_wrapper{
+  height: 35%;
+  display: flex;
+  justify-content:center;
+  .phone-outer-layer,
+  .email-outer-layer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:280px;
+    border-radius: 5px;
+      a{
+        text-decoration: none;
+        color: black;
+        cursor: pointer;   
+      }         
+  } 
+  .phone-outer-layer {
+    padding-bottom: 1%;
+    padding-right: 1%;
+      .number{
+        background-color: rgb(114, 109, 145);
+        filter:drop-shadow(-2px 2px 2px gray);
+      }
+      .phone_img {
+        border: 1px solid lightgrey;
+        background-color: white;
+        filter:drop-shadow(-2px 0px 2px gray);
+      }
+  }
+  .email-outer-layer {
+    padding-top: 1%;
+    padding-left: 1%;
+    .mail{
+      background-color: rgb(44, 138, 44);
+      filter:drop-shadow(2px 2px 2px gray);
+    }
+    .mail_img{
+      border: 1px solid lightgrey;
+      background-color: white;
+      filter:drop-shadow(2px 0px 2px gray);
+    }
+  }
+     
+}
+
+.number,
+.mail {
+  width:100%;
+  height:50%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  filter:drop-shadow(2px 2px 2px gray);
+}
+
+.phone_img,
+.mail_img {
+  width:100%;
+  height:50%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    transition: 0.4s all;
+    &:hover {
+      transform: scale(1.2);
+    }
+  } 
+}
+
+// /*====================================
+// grids with beetles
+// ==================================== */
+
+.phone_wrapper,
+.email_wrapper {
+    display: grid;
+    grid-template-columns: 90px 90px 90px;
+    grid-gap: 4px;
+    background-color: #fff;
+    color: black;    
+    .box-1,
+    .box-2 {
+      color:black;
+      border-radius: 5px;
+      background-image:url('../images/zuczek.png');
+      background-repeat: no-repeat;
+      background-size: 308%;
+      background-blend-mode: screen;     
+    }
+    .a{background-position: 0% 0%;}      
+    .b{background-position: 50% 0%;}      
+    .c{background-position: 100% 0%;}      
+    .d{background-position: 0% 50%;}      
+    .e{background-position: 50% 50%;}      
+    .f{background-position: 100% 50%;}     
+    .g{background-position: 0% 100%;}      
+    .h{background-position: 50% 100%;}      
+    .i{background-position: 100% 100%;}
+
+    .box-1{
+      background-color: rgb(44, 138, 44);
+      filter:drop-shadow(2px 2px 2px gray);   
+    }
+    .box-2{
+      background-color:   rgb(70, 63, 112);
+      filter:drop-shadow(-2px 2px 2px gray);   
+    }
+}
+
+
+// /*====================================
+// Animation SLIDE-IN
+// ==================================== */
+
+.slide-in-left {
+  animation: slide-in-left 1s ease-out both;
+}
+    
+.slide-in-right {
+  animation: slide-in-right 1s ease-out both;  
+}
+  
+@keyframes slide-in-left{
+    0% {
+      -webkit-transform: translateX(-200%);
+      transform: translateX(-200%)
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
+    }
+  }
+  
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(200%);
+      transform: translateX(200%)
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
+    }
+  }
+
+
+
+// /*====================================
+// Section-4: Footer
+// ==================================== */
+.page-footer {
+  margin-top:6%;
+}
+.page-footer-wrapper{
+  height: 75px;
+  background: lightgrey;
+  padding: 2%;
+}
+.page-footer-nav {
+  float: left; 
+}
+
+.page-footer-nav a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.4s all; 
+}
+
+.page-footer-nav a:hover {
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff; 
+}
+
+.page-footer-copyright {
+  float: right;
+  color: black; 
+}
+ /* ====================================
+  Section-4: Media query
+  ==================================== */

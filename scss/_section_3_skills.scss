@@ -1,0 +1,82 @@
+ /* ====================================
+ Section-3: Skills
+  ==================================== */
+
+  .wrapper_skills{
+    width:100%;
+    height: 66%;
+    padding-top: 10%;
+    overflow: hidden;
+    .coding{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 10%;      
+        img{
+          filter:drop-shadow(-1px 1px 1px gray);
+        }
+        h3{
+            font-size: 200%;
+        }      
+    }
+}
+
+// *====================================
+// Section-3: Animation SLIDE-IN
+// ==================================== */
+
+.slide-in{   
+  transform: translateX(-600%);    
+  animation: slide-in 0.5s linear both;
+}
+.wrapper_html {
+    animation-delay: 1.5s     
+}
+.wrapper_css{
+  animation-delay: 1.3s;
+}
+.wrapper_js {
+  animation-delay: 1.1s;
+}
+.wrapper_jquery {
+  animation-delay: 0.9s;
+}
+.wrapper_react {
+  animation-delay: 0.7s;
+}
+
+.wrapper_sass {
+  animation-delay: 0.5s;
+ 
+}
+
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-600%);
+    transform: translateX(-600%)
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+
+
+
+ /* ====================================
+ Section-3-skills - media-query
+  ==================================== */
+
+  @media screen and (max-width: 992px) {
+    .wrapper_skills{        
+      width:150%;
+  }
+    
+   }
+
+
+
+
+  
