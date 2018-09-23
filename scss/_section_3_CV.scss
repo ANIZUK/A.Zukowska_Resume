@@ -1,7 +1,7 @@
  /* ====================================
   Section-3: CV
   ==================================== */
-.section-3{
+  .section-3{
     background-image: url('../images/beetle_green.png');
     background-repeat: no-repeat;
     background-position-x: right;
@@ -32,21 +32,38 @@
             background-size: 10%;
             background-repeat: no-repeat; 
             background-position: 5% 50%; 
+            display: -webkit-box; 
+            display: -ms-flexbox; 
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-transition:1s;
+            -o-transition:1s;
             transition:1s;
             opacity:0;
-            filter:drop-shadow(-2px 2px 2px gray);
-            animation: skew 2s infinite;
-            animation-direction: alternate;          
+            -webkit-filter:drop-shadow(-2px 2px 2px gray);
+                    filter:drop-shadow(-2px 2px 2px gray);
+            -webkit-animation: skew 2s infinite;
+                    animation: skew 2s infinite;
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate;          
             h1 {
-                align-self: center;
+                -ms-flex-item-align: center;
+                    -ms-grid-row-align: center;
+                    align-self: center;
                 font-size: calc(1vh + 1vw);
                 text-align: center;   
                 cursor: pointer;
-                transition: transform 0.4s; 
+                -webkit-transition: -webkit-transform 0.4s;
+                transition: -webkit-transform 0.4s;
+                -o-transition: transform 0.4s;
+                transition: transform 0.4s;
+                transition: transform 0.4s, -webkit-transform 0.4s; 
                 &:hover{
-                    transform: scale(1.1);
+                    -webkit-transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                            transform: scale(1.1);
                 }
             } 
         }
@@ -60,12 +77,25 @@
 
 }
 
-@keyframes skew {
+@-webkit-keyframes skew {
     0% {
-      transform: skewX(2deg);
+      -webkit-transform: skewX(2deg);
+              transform: skewX(2deg);
     }
     100% {
-      transform: skewX(-2deg);
+      -webkit-transform: skewX(-2deg);
+              transform: skewX(-2deg);
+    }
+  }
+
+@keyframes skew {
+    0% {
+      -webkit-transform: skewX(2deg);
+              transform: skewX(2deg);
+    }
+    100% {
+      -webkit-transform: skewX(-2deg);
+              transform: skewX(-2deg);
     }
   }
 
@@ -74,13 +104,14 @@
   ==================================== */
 
   @media screen and (max-width: 992px) {
-    [class*=col-] {
-        margin-left: -13%;
-    }
-
-    
+      .CV_wrapper{
+        [class*=col-] {
+            // margin-left: -4%;
+            width: 150%;
+        }  
+      }
+   
    }
  
-
 
 

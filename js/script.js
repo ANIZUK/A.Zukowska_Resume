@@ -1,5 +1,5 @@
 $(document).ready(function() {
-const controller = new ScrollMagic.Controller();
+
 
 
 /* ====================================
@@ -8,11 +8,13 @@ const controller = new ScrollMagic.Controller();
 const showText = function (target, message, index, interval) {    
     if (index < message.length) { 
       $(target).append(message[index++]); 
-      setTimeout(function () { showText(target, message, index, interval); }, interval); 
+      setTimeout(function () { 
+          showText(target, message, index, interval); 
+        }, interval); 
     } 
   }
    
-showText(".name", "Ania Żukowska", 0, 200);    
+showText(".name", "Anna Żukowska", 0, 200);    
 
 /* ====================================
   Section 1: Menu - on click - navigation slides down
@@ -68,6 +70,8 @@ $('.navigation-wrapper').find('a').on('click', function(){
   grasping trigger element(using scroll magic) for animation
   animating img
   ==================================== */
+
+const controller = new ScrollMagic.Controller();
 const scene = new ScrollMagic.Scene({
     triggerElement:'#section-2'
 })
@@ -75,6 +79,9 @@ const scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 
+  /* ====================================
+ ANIMATION on mouseenter: using animate.css
+  ==================================== */
   const $game1 = $('.game-1');
   const $game2 = $('.game-2');
   const $game3 = $('.game-3');
@@ -82,10 +89,6 @@ const scene = new ScrollMagic.Scene({
   const $game2img = $('.game-2 img');
   const $game3img = $('.game-3 img');
 
-
-  /* ====================================
- ANIMATION on mouseenter: using animate.css
-  ==================================== */
 function animationHover(element, element2, animation){
     element = $(element);
     element2 = $(element2);
@@ -175,30 +178,7 @@ $('wrapper_languages').addClass('animate', 'fadeIn');
 $('.wrapper_hobby').hide();
 TogglingClasses($(".col-4"),$('.wrapper_hobby'), $('.col-1'),  $('.col-2'),  $('.col-3') );
 // $('.hobby').text('Najedź na obrazek, żeby dowiedzieć się więcej');
-// function showContent (){
 
-// ele.mouseenter (function(){
-// if(ele =  $('.bike')){
-//     $('.hobby').text('Rower zawsze i wszędzie- niezależnie od pogody. W mieście - jedyny środek transportu. A poza tym tysiące rajdów, niezliczone kilometry przebyte tu i ówdzie.').addClass('hobby_description');
-// }
-// if (ele = $('.trek')) {
-//     $('.hobby').text('Wytrawny chodziarz, nie liczący kilometrów wędrówek.').addClass('hobby_description');
-// }
-// if(ele =  $('.theatre')) {
-//     $('.hobby').text('Teraz podziwiam to co się dzieje na scenie z perspektywy widza, ale wiem jak to jest być na scenie.').addClass('hobby_description');
-// }
-// if(ele = $('.run')){
-//     $('.hobby').text('Bieganie przbiegnięte maratony i półmaratony, biegi okolicznościowe.').addClass('hobby_description');
-// }
-// if (ele = $('.fit')){
-//     $('.hobby').text('Uwielbiam sport.').addClass('hobby_description');
-// }
-// })
-// ele.on('mouseleave', function(){
-//     $('.hobby').text('');
-// })
-// }
-// showContent();
 
 
      

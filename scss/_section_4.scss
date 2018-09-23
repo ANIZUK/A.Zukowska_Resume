@@ -1,7 +1,7 @@
  /* ====================================
   Section-4: Contact & footer
   ==================================== */
-#section-4{
+  #section-4{
     @include container;
     height:100vh;
     overflow: hidden;
@@ -13,13 +13,24 @@
 .phone_main_wrapper,
 .e-mail_main_wrapper{
   height: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content:center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
   .phone-outer-layer,
   .email-outer-layer {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width:280px;
     border-radius: 5px;
       a{
@@ -33,12 +44,14 @@
     padding-right: 1%;
       .number{
         background-color: rgb(114, 109, 145);
-        filter:drop-shadow(-2px 2px 2px gray);
+        -webkit-filter:drop-shadow(-2px 2px 2px gray);
+                filter:drop-shadow(-2px 2px 2px gray);
       }
       .phone_img {
         border: 1px solid lightgrey;
         background-color: white;
-        filter:drop-shadow(-2px 0px 2px gray);
+        -webkit-filter:drop-shadow(-2px 0px 2px gray);
+                filter:drop-shadow(-2px 0px 2px gray);
       }
   }
   .email-outer-layer {
@@ -46,12 +59,14 @@
     padding-left: 1%;
     .mail{
       background-color: rgb(44, 138, 44);
-      filter:drop-shadow(2px 2px 2px gray);
+      -webkit-filter:drop-shadow(2px 2px 2px gray);
+              filter:drop-shadow(2px 2px 2px gray);
     }
     .mail_img{
       border: 1px solid lightgrey;
       background-color: white;
-      filter:drop-shadow(2px 0px 2px gray);
+      -webkit-filter:drop-shadow(2px 0px 2px gray);
+              filter:drop-shadow(2px 0px 2px gray);
     }
   }
      
@@ -62,11 +77,18 @@
   width:100%;
   height:50%;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 5%;
-  filter:drop-shadow(2px 2px 2px gray);
+  -webkit-filter:drop-shadow(2px 2px 2px gray);
+          filter:drop-shadow(2px 2px 2px gray);
 }
 
 .phone_img,
@@ -74,13 +96,23 @@
   width:100%;
   height:50%;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   img {
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
     &:hover {
-      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
     }
   } 
 }
@@ -91,8 +123,10 @@
 
 .phone_wrapper,
 .email_wrapper {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 90px 90px 90px;
+    -ms-grid-columns: 90px 90px 90px;
+        grid-template-columns: 90px 90px 90px;
     grid-gap: 4px;
     background-color: #fff;
     color: black;    
@@ -117,11 +151,13 @@
 
     .box-1{
       background-color: rgb(44, 138, 44);
-      filter:drop-shadow(2px 2px 2px gray);   
+      -webkit-filter:drop-shadow(2px 2px 2px gray);
+              filter:drop-shadow(2px 2px 2px gray);   
     }
     .box-2{
       background-color:   rgb(70, 63, 112);
-      filter:drop-shadow(-2px 2px 2px gray);   
+      -webkit-filter:drop-shadow(-2px 2px 2px gray);
+              filter:drop-shadow(-2px 2px 2px gray);   
     }
 }
 
@@ -131,17 +167,41 @@
 // ==================================== */
 
 .slide-in-left {
-  animation: slide-in-left 1s ease-out both;
+  -webkit-animation: slide-in-left 1s ease-out both;
+          animation: slide-in-left 1s ease-out both;
 }
     
 .slide-in-right {
-  animation: slide-in-right 1s ease-out both;  
+  -webkit-animation: slide-in-right 1s ease-out both;
+          animation: slide-in-right 1s ease-out both;  
 }
+  
+@-webkit-keyframes slide-in-left{
+    0% {
+      -webkit-transform: translateX(-200%);
+      transform: translateX(-200%)
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
+    }
+  }
   
 @keyframes slide-in-left{
     0% {
       -webkit-transform: translateX(-200%);
       transform: translateX(-200%)
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
+    }
+  }
+  
+  @-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(200%);
+      transform: translateX(200%)
     }
     100% {
       -webkit-transform: translateX(0);
@@ -181,6 +241,8 @@
   color: black;
   text-transform: uppercase;
   text-decoration: none;
+  -webkit-transition: 0.4s all;
+  -o-transition: 0.4s all;
   transition: 0.4s all; 
 }
 
@@ -195,3 +257,58 @@
  /* ====================================
   Section-4: Media query
   ==================================== */
+
+  @media screen and (max-width: 720px) {
+    .phone_wrapper,
+    .email_wrapper {
+      -ms-grid-columns: 50px 50px 50px;
+          grid-template-columns: 50px 50px 50px;
+      .box-1,
+      .box-2{
+        background-size: 570%;
+      }
+      .a{background-position: 28% 0%;}      
+      .b{background-position: 50% 0%;}      
+      .c{background-position: 72% 0%;}      
+      .d{background-position: 28% 50%;}      
+      .e{background-position: 50% 50%;}      
+      .f{background-position: 72% 50%;}     
+      .g{background-position: 28% 100%;}      
+      .h{background-position: 50% 100%;}      
+      .i{background-position: 72% 100%;}
+    }
+  
+ }
+ @media screen and (max-width: 550px) {
+  .phone_wrapper,
+  .email_wrapper {
+    -ms-grid-columns: 20px 20px 20px;
+        grid-template-columns: 20px 20px 20px;
+    .box-1,
+    .box-2{
+      background-size: cover;
+    }
+    .a{background-position: 20% 0%;}      
+    .b{background-position: 50% 0%;}      
+    .c{background-position: 80% 0%;}      
+    .d{background-position: 20% 50%;}      
+    .e{background-position: 50% 50%;}      
+    .f{background-position: 80% 50%;}     
+    .g{background-position: 20% 100%;}      
+    .h{background-position: 50% 100%;}      
+    .i{background-position: 80% 100%;}
+  }
+
+  .phone_main_wrapper,
+  .e-mail_main_wrapper {
+    .phone-outer-layer,
+    .email-outer-layer{
+      width: 150px;
+      a {
+        font-size: 0.7rem;
+      }
+    }
+  }
+ 
+
+}

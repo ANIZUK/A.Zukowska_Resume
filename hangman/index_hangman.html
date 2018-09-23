@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <head>
  
-    <title>Hangman Game</title>
-    <link href="main.css"rel="stylesheet"type="text/css"/>
+    <title>Hangman</title>
+    <link href="hangman.css"rel="stylesheet"type="text/css"/>
     <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900i|Shadows+Into+Light+Two&amp;subset=latin-ext" rel="stylesheet">
  	
  
 </head>
 <body>
-    <div id="game_wrapper"><h1>Hangman</h1>
-        <button id='startButton' class = 'button'>START</button>
-        <div id="word"></div>
-        <div id="hint"></div>
-        <div id="clue"></div>
-        <div id="alphabet"></div>
-        <div id="score"></div>
- 
-</div>
+    <header>
+        <h1>Hangman game</h1>
+    </header>
+
+         <div class="wrapper">
+             <div id="alphabet"></div>  
+             <div id="hold"></div>
+             <p id="chances"></p>
+             <p id="clue"></p>  
+             <div id="picture_buttons">
+               <button id="hint">Hint</button>
+               <button id="reset">Play again</button>
+               <div id="picture_wrapper">
+                <img src="https://s33.postimg.cc/vlcf00hdb/image.png" alt="image"/>
+                <img src="https://s33.postimg.cc/facb3pclb/image.png" alt="image"/>
+                <img src="https://s33.postimg.cc/3mi98kfkf/image.png" alt="image"/>
+                <img src="https://s33.postimg.cc/iigsg5yov/image.png" alt="image"/>
+                <img src="https://s33.postimg.cc/dwko7tkvj/image.png" alt="image"/>
+               </div>
+                
+
+             </div>
+         </div>
+         
+         
+         
+         
  
 <script src= "http://code.jquery.com/jquery-latest.js"></script> 
 <script src="hangman.js"></script>

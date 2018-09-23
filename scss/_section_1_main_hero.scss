@@ -2,7 +2,7 @@
  /* ====================================
  Section-1
   ==================================== */
-#section-1 {
+  #section-1 {
     @include container;
     height:100vh;
     background-image: url('../images/beetle_green.png');
@@ -11,12 +11,6 @@
     background-position-y: center;
     background-size: 50%;
     background-attachment: fixed; 
- 
-    // .shape {
-    //     border-top: 14vh solid transparent;
-    //     border-right: 79.8vw solid map-get($mainColors,3);;
-    //     border-bottom: 10vh solid map-get($mainColors,3);;
-    // } 
 }
 
  /* ====================================
@@ -39,32 +33,57 @@
 .main-banner-wrapper{
     height: 100%;
     margin-left: 10%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     .main-banner-title {   
       width:60%;
       text-align: center;     
       .name{        
-          font-size: calc(2vh + 2vw);
+          font-size: calc(3vh + 3vw);
           padding-bottom: 15px;
           text-shadow: 0 0 30px rgba(0,0,0,0.5);
       }
   }
   .main-banner-text {
     text-align: center;
-    font-size: calc(1vh + 1vw);
+    font-size: calc(1.3vh + 1.3vw);
+    span{
+      font-style: italic;
+    }
     // font-size: 1.4rem;
   } 
 
 }
 
+ /* ====================================
+Section-1: media query
+  ==================================== */
+
+#section-1{
+  @include for-phone-only {
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: 80%;
+    background-attachment: fixed;
+   .main-banner-wrapper{
+      margin-right:18%;
+      margin-left: 18%;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
+      padding-top:200px;
+    } 
+    .main-banner-title {
+      width: 100%;
+    }
+ 
+}
+}
+
+
  
 
-
-
-
-
-
-  
-  
-  

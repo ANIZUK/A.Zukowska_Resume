@@ -5,24 +5,19 @@
         <title>Resume Anna Żukowska</title>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900i|Shadows+Into+Light+Two&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css"> 
         <link rel="stylesheet" href="css/animate.css">
       
     </head>
     <body>
+          
 
 <div class="main-container">
         <div class="arrow"></div>
-    <section id="section-1">
-        
-
-            <!-- <div class="menu"> -->
-                   
-                    <button class="hamburger">&#9776;</button>
-            <!-- </div> -->
-       
+    <section id="section-1">                   
+                    <button class="hamburger">&#9776;</button>      
             <div class="navigation-wrapper">
                 <nav>
                     <ul>
@@ -40,13 +35,9 @@
                 <div class="main-banner-title">
 
                     <div class="name"></div>
-                        <!-- <svg width="100%" height="30vh">
-                            <text x="20vw" y="20vh" class="small">Anna</text>
-                              <text x="5vw" y="24.5vh" class="big">Żukowska</text>
-                            </svg> -->
                     <hr style = "color:black">
                     <div class="main-banner-text">
-                    <i>(łac.) Geotrupes sensu lato</i> </br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ullam illum atque. Quasi veritatis expedita molestias quos officiis consequatur et tempore assumenda nam possimus, corrupti soluta corporis iste odio error.
+                    <span>(łac.) Geotrupes sensu lato</span> </br>Dzień dobry. Postanowiłam spróbować swoich sił w kodowaniu. Przedstawiam Państwu efekt mojej dotychczasowej nauki.
                     </div> 
                     <hr style = "color:black">
 
@@ -54,8 +45,6 @@
                 <div class="main-banner-photo"></div>
                        
             </div><!--e: main-banner-wrapper-->                        
-
-            <!-- <div class="shape"></div>  -->
 </section><!--e: section-1 -->   
 
 <section id="section-2">
@@ -72,9 +61,11 @@
                             Kółko - krzyżyk
                         </h2>
                         <div class="game_description">
-                            Gra ze szkolej ławki, przeniesiona na monitor. Tym razem zasilona biblioteką JavaScript React.
+                            Gra ze szkolej ławki, przeniesiona na monitor. Tym razem zasilona JavaScript React.
                         </div>
-                        <a href="" class="game_btn">Graj</a>
+                        <div class="game_btn">
+                            <a href="kolo_krzyzyk/index_tictactoe.html">Graj</a>
+                        </div> 
                     </article> 
                 </div>
 
@@ -88,9 +79,11 @@
                             Memory
                         </h2>
                         <div class="game_description">
-                            Niezwykle popularna gra pamięciowa wśród początkująch Web Developerów. Logika gry opiera się na bibliotece JQuery.
+                            Niezwykle popularna gra pamięciowa wśród początkująch Web Developerów. Logika gry oparta na Java Script.
                         </div>
-                        <a href="memory/index_memory.html"class="game_btn">Graj</a>
+                        <div class="game_btn">
+                            <a href="memory/index_memory.html">Graj</a>
+                        </div>                        
                     </article> 
                 </div>
 
@@ -102,9 +95,11 @@
                             Hangman
                         </h2>
                         <div class="game_description">
-                            Gra w wyszkuwanie słow, zasób słownika 20 wyrazów, w formie JSONfile. 
+                            Gra w odgadywanie słowa, zasób słownika: 10 wyrazów. Użyta technologia: JQuery. 
                         </div>
-                        <a href="hangman/index_hangman.html" class="game_btn">Graj</a>
+                        <div class="game_btn">
+                            <a href="hangman/index_hangman.html">Graj</a>
+                        </div>
                     </article>
 
                 </div>
@@ -147,19 +142,19 @@
              <!--display:hidden-->
                 <div class="work_wrapper">
                     <div class="timeline">
-                        <div class="container left CMS">
+                        <div class="work_container left CMS">
                           <div class="content">
                             <h2>2014 - 2018</h2>
                             <p>Kancelaria prawna: CMS Cameron McKenna</p>
                           </div>
                         </div>
-                        <div class="container left SOW">
+                        <div class="work_container left SOW">
                           <div class="content">
                             <h2>2013 - 2014</h2>
                             <p>Specjalny Ośrodek Wychowawczy</p>
                           </div>
                         </div>
-                        <div class="container right EFY">
+                        <div class="work_container right EFY">
                           <div class="content">
                             <h2>2010 - 2015</h2>
                             <p>Szkoła językowa: English For You</p>
@@ -192,14 +187,14 @@
                                 <h3>3/5</h3>
                         </div>
                         <div class="wrapper_react slide-in">
-                                <img src="images/jquery.png" >
+                               <img src="images/react.png" >
                                 <h3>2/5</h3>
-                                <!-- <img src="images/react.png" > -->
+                                
                         </div>
                         <div class="wrapper_sass slide-in">
-                                <img src="images/jquery.png" >
-                                <h3>/5</h3>
-                                <!-- <img src="images/sass.png" > -->
+                                <img src="images/sass.png" >
+                                <h3>4/5</h3>
+                                
                         </div>
                     </div><!--e coding -->                        
                     <hr>    
@@ -216,27 +211,38 @@
              <!--display:hidden-->
                 <div class="wrapper_hobby">
 
-                    <div class="infinite_move">
-                        <div class="wrapper_move">
-                            <span>
-                                <div class="move bike"><img src="images/bicycle.svg" /></div>
-                                <div class="move theatre"><img src="images/theater.svg" /></div>
-                                <div class="move run"><img src="images/running-man.svg" /></div>
-                                <div class="move trek"><img src="images/trekking.svg" /></div>
-                                <div class="move fit"><img src="images/weight.svg" /></div>
-
-                            </span>
-                            <span>
-                                <div class="move bike"><img src="images/bicycle.svg" /></div>
-                                <div class="move theatre"><img src="images/theater.svg" /></div>
-                                <div class="move run"><img src="images/running-man.svg" /></div>
-                                <div class="move trek"><img src="images/trekking.svg" /></div>
-                                <div class="move fit"><img src="images/weight.svg" /></div>
-                            </span>
-
+                    <div class="container">
+                        <div class="item">
+                          <div class="hobby">
+                            <h5>rower</h5>
+                            <p>setki km nie tylko po mieście</p>
+                          </div>
                         </div>
-                    </div>
-                    <div class="hobby"></div> 
+                        <div class="item">
+                          <div class="hobby">
+                            <h5>teatr</h5>
+                            <p>obecnie przed, kiedyś na scenie</p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="hobby">
+                            <h5>trekking</h5>
+                            <p>chodzę bo uwielbiam</p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="hobby">
+                            <h5>jogging</h5>
+                            <p>biegam bo lubię</p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="hobby">
+                            <h5>fitness</h5>
+                            <p>trening funkcjonalny</p>
+                          </div>
+                        </div>
+                      </div>
                 </div>
                 <!--display:hidden-->
 
@@ -296,10 +302,6 @@
 
             <div class="page-footer-wrapper">
 
-                <!-- <a class="page-footer-logo">
-                    <img src="images/logo.png"alt="jakies logo">
-                </a> -->
-            
                 <div class="page-footer-bottom">
                     <ul class="page-footer-nav">
                         <li><a href="#section-1">Homepage</a></li>
@@ -314,14 +316,15 @@
     </section>
 
 </div><!--e:main-container-->
-         
-    <script src= "http://code.jquery.com/jquery-latest.js"></script> 
-    <script src="js/script.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>
-    new WOW().init();
-    </script>
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+        <script src="js/script.js"></script>
     
     </body>
 </html>

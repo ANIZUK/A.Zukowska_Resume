@@ -1,115 +1,175 @@
 $(document).ready(function () {
+
+
+
+		const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+			  'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+			  't', 'u', 'v', 'w', 'x', 'y', 'z'];
+		
+		let $word ; // Selected word
+		let $hint; // Hint on demand
+		let $guess ; // Geuss
+		let $wordHolder = [ ]; // Stored geusses
+		let $chances = 5; // Chances
+		let $counter ; // Count guessed letter
+	  
+	  
+		// creating alphabet
+		let createAlphabet = function () {
+		  const $alphabetButtons = $('<ul></ul>');
+	  
+		  for (let i = 0; i < alphabet.length; i++) {
+				$letter = $('<li></li>');
+				$letter.append(alphabet[i]);	
+				$('#alphabet').append($alphabetButtons);
+				$alphabetButtons.append($letter);
+
+				//checking if clicked letter is correct
+				check();
+		  }
+		}
+		  
+		
+	  
+		// creating space for random word
+		 const showSpaceForRandomWord = function () {
+		  let $randomWord = $('<ul></ul>');
+	  
+		  for (let i = 0; i < $word.length; i++) {
+				$randomWord.addClass('rndWord');
+				$randomWordletter = $('<li>_</li>');
+				$randomWordletter.addClass('guess');
+	  
+				$wordHolder.push($randomWordletter);
+				$('#hold').append($randomWord);
+				$randomWord.append($randomWordletter);
+			}
+
 	
-	var alphabet = 'abcdefghijklmnopqrstuvwxyz';
-	var word;
-	var score = 5;
-	var wordClueList =new Array;
-	var clue;
+		}
+		
+		// showing player's chances, displaying hangman picture, info: you win / you lost
+		 const trackPlayersMoves = function () {
+		  $("#chances").text("Chances: " + $chances);
 
-// creating alphabet squares
+		  $('#picture_wrapper').children().hide();
 
-function createAlphabet (){
-	$.each(alphabet.split(''), function(i, val) {
-		$('#alphabet').append($('<span class="guess">' + val + '</span>'));
-	});
-}
+		  		if ($chances == 4) {
+					$('#picture_wrapper img:nth-child(1)').fadeIn();
+		  		}
+		  		if ($chances == 3) {
+					$('#picture_wrapper img:nth-child(2)').fadeIn();
+				}
+				if ($chances == 2) {
+					$('#picture_wrapper img:nth-child(3)').fadeIn();
+				}
+				if ($chances == 1) {
+					$('#picture_wrapper img:nth-child(4)').fadeIn();
+				}
+				if ($chances == 0) {
+					$('#picture_wrapper img:nth-child(5)').fadeIn();
+				}
+		 
+		 if ($chances < 1) {
+				$("#chances").text("Game Over");
+				$('#alphabet').empty();
+				$('#hold').text($word);
+		  }
+		  for (let i = 0; i < 	$wordHolder.length; i++) {
+				if ($counter === $wordHolder.length) {
+				  $("#chances").text("You Win!");
+				}
+		  }
+		}
+	  
+	  
+		
+
+	  
+		// checking if clicked letter is correct one
+		 const check = function (){
+		  $letter.click (function (){
+				let $geuss = (this.innerHTML);
+				this.setAttribute("class", "active");
+				for (let i = 0; i < $word.length; i++) {
+				  if ($word[i] === $geuss) {
+						$wordHolder[i].text($geuss);
+						$counter += 1;
+				  } 
+				}
+				let j = ($word.indexOf($geuss));
+				if (j === -1) {
+				  $chances -= 1;
+					trackPlayersMoves();
+				} else {
+				  trackPlayersMoves();
+				}
+		  })
+		}
+		
+		  
+		// Play
+const play = function () {
+
 createAlphabet();
 
-
-
-//getting a random word and a clue from hangman.json
-function getWord(){
-	$.getJSON('hangman.json', function(data) { 
-
-		for(i=0;i<data.wordlist.length;i++){ 
-			wordClueList[i]=new Array;
-			wordClueList[i][0]=data.wordlist[i].word;
-			wordClueList[i][1]=data.wordlist[i].clue;
-		}
-
-	random = Math.floor(Math.random()*wordClueList.length);
-	word = wordClueList[random][0];
-	clue = wordClueList[random][1];
-
-console.log(word);
-console.log(clue);
-	})
-
-}	
-
-// on click events: 
-// (1)showing two buttons: displaying a hint and reloading the game; 
-// (2)showing the number of chances;
-// (3)generating <span> list, each with val()= 1 letter from random word
-
-
-function startGame() {
-
-	getWord();
-		
-	$('#startButton').on('click', function() {
-		
-		$('#startButton').fadeOut();
-		// $('#game_wrapper').append($("<button id='startAgainButton'>START AGAIN</button>"));
-		$('#hint').append($("<button id='hint'>HINT</button>"));
-		$('#score').html('Number of chances: ' + score);	
-		$.each(word.split(""), function(i, val) {
-		  $('#word').append($('<span class="letter" value="' + val + '"> _ </span>'));		 
-		});
-		
-		showingClue();
-		checkLetter();
-		// reloadGame();
-	})//e: click on start button
-	
-}
-startGame();
-
-
-//displaying a hint
-function showingClue(){
-	$('#hint').on('click', function() {
-		$('#hint').hide();
-			$('#clue').append($('<span>' + clue + '</span>'));
-	})
-	
-}
-
-//checking letter, click on alphabet square
-
-function checkLetter() {
-	$('.guess').click(function() {
+//list of words and hints			
+const words = ["pie", "border", "kangaroo", "valley", "gif", "winter", "straw", "law", "bicycle", "rain", "laptop", "javascript", "mountain"];
+const hints = [
+	"a baked dish of fruit, or meat and vegetables, typically with a top and base of pastry", 
+	"a line separating two countries, administrative divisions, or other areas", 
+	"a large plant-eating marsupial with a long powerful tail and strongly developed hindlimbs that enable it to travel by leaping, found only in Australia and New Guinea", 
+	"a low area of land between hills or mountains, typically with a river or stream flowing through it", 
+	"a lossless format for image files that supports both animated and static images", 
+	"the coldest season of the year", 
+	"dried stalks of grain, used especially as fodder or as material for thatching, packing, or weaving",
+	"the system of rules which a particular country or community recognizes as regulating the actions of its members and which it may enforce by the imposition of penalties",
+	"a vehicle consisting of two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front whee",
+	"the condensed moisture of the atmosphere falling visibly in separate drops",
+	"a computer that is portable and suitable for use while travelling",
+	"an object-oriented computer programming language commonly used to create interactive effects within web browsers",
+	"a large natural elevation of the earth's surface rising abruptly from the surrounding level; a large steep hill"
+];
 			
-	let count = $('#word [value=' + $(this).text() + ']').each(function() {
-	$(this).text($(this).attr('value'));}).length;
-let h = $('#word [value=' + $(this).text() + ']');
-let a = $(this).text($(this).attr('value')).textContent;
-console.log($('#word'));
+// capturing random word
 
+		  $word = words[Math.floor(Math.random() * words.length)];
+		  console.log($word);
 
-
-		if(count > 0) {
-			$(this).css('color', 'green').unbind('click');
-
-		}
-		else if(count === 0) {
-			$(this).css('color', 'red').unbind('click');
-			--score;
-			$('#score').html('Number of chances: ' + score);
-			if (score === 0) {
-			$('.guess').unbind('click');
-			$('#alphabet').empty();
-			createAlphabet();
-			$('#hint').empty();
-			$('#startAgainButton').fadeOut();
-			startGame();
-	
+// assigning hint to random word
+			$hintIndex = words.indexOf($word);
+			$hintText = hints[$hintIndex];
+			console.log($hintText);
 		
-			}
+			
+// showing the hint	  
+			$('#hint').on ('click',function() {	
+				$("#clue").text("Hint: " +  ($hintText));				
+			});
+	  
+		  $wordHolder = [ ];
+		  $counter = 0;
+		  showSpaceForRandomWord();
+		  trackPlayersMoves();
 		}
+	  
+play();
+		
+	
+	  
+		
+// StartAgain button
+		$('#reset').click(function(){
+			$("#clue").text("");
+			$wordHolder = [ ];
+			$('#hold').empty();
+			$chances = 5;
+			$('#alphabet').empty();
 
-
-	});
-}
+			play();
+		});
+	  
+	  
+	
 
 });//doc ready

@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-family: 'Playfair Display', serif; 
+}
+
+body {
+  background: rgb(83, 121, 235);
+}
+
+.title,
+#winner,
+#info,
+#startBtn {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+#startBtn {
+height: 35px;
+width: 200px;
+background-color: white;
+border: 1px dashed black;
+margin: 5px auto;
+}
+#startBtn:hover { 
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 1px dashed white;
+}
+
+.cell:hover {
+    background-color:black
+}
+
+.table, tr td{
+margin: 20px auto;
+border: 1px solid black;
+border-spacing:15px;
+border-radius: 5px;
+
+}
+
+td {
+   height: 150px;
+   width: 150px;
+   background-color: white;
+   text-align: center;
+   font-size: 35px;
+}
+
+.winner_info{
+    margin: 5px auto;
+    line-height: 70px;
+    width: 400px;
+    background-color: black;
+    color: white;
+    border: 1px dashed white;
+}

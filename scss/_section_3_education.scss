@@ -79,9 +79,22 @@
  Section-3-education - media-query
   ==================================== */
 
-  @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .education_wrapper{        
       width:150%;
-  }
+  }    
+}
+@media screen and (max-width: 650px) {
+    .education_wrapper li {
+      div{        
+        height: 7em;
+      }
+      p{
+        font-size: 0.6rem;
+      }
+    }
+}
     
-   }
+   
+
+   

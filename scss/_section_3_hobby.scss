@@ -2,61 +2,102 @@
   Hobby
   ==================================== */
 
- .wrapper_hobby {
-  width:100%;
-  height: 66%;
-  padding-top: 10%;
-  overflow: hidden;
-    .infinite_move {
-      height: 40%;
-      width: 100%;
-      border: 2px solid lightgray;
-      position: relative;
-      margin-top: 10%;
-      margin-bottom: 10%;
-        .wrapper_move {
-          display: block;
-          width: 200%;
-          margin-top: 6%;
-          position: absolute;
-          animation: infinite-move 20s linear infinite;
-          &:hover{
-            animation-play-state: paused;
-          }
-              span {
-                float: left;
-                width: 50%;
-                  .move {
-                    width: 110px;
-                    height: 110px;
-                    background: lightgray;
-                    border: 1px solid black; 
-                    border-radius: 5px;
-                    margin: 0 0.5em;
-                    float: left;
-                    transition: all .2s ease-out;
-                  }
-              }           
-        }       
-    }
-    .hobby{
-      height: 30vh;
-      width: 100%;
-        .hobby_description{
-          font-size: 1.5em;
-        }
-    }      
-}
-.move:hover{
-  transform: scale(2.1);
-  cursor: pointer;
-
-} 
-.hobby_description{
-
-}
+  .wrapper_hobby {
+    width:100%;
+    height: 66%;
+    padding-top: 5vh;     
+  }
   
-@keyframes infinite-move {
-  0% { left: 0; }
-  100% { left: -100%; }
-}
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    overflow: hidden;
+    .item{
+      margin: auto;
+      text-align: center;
+      padding-top: 10%;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      max-width: 15%;
+      height: 45vh;
+      min-width: 10%;
+      -webkit-filter:drop-shadow(-2px 2px 2px gray);
+              filter:drop-shadow(-2px 2px 2px gray);
+      background-color: #ccf;
+      border-radius: 5px;
+      background-position: bottom;
+      background-size: 400%;
+      background-repeat: no-repeat;
+     
+      &:nth-of-type(1){background-image: url('../images/bicycle.svg');}
+      &:nth-of-type(2){background-image: url('../images/theater.svg');}
+      &:nth-of-type(3){background-image: url('../images/trekking.svg');}
+      &:nth-of-type(4){background-image: url('../images/run.svg');}
+      &:nth-of-type(5){background-image: url('../images/weight.svg');}
+    
+      &:hover{
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        max-width: 40% ;
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 1px solid grey;
+        background-size: 70%;
+       
+        
+        p {
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          -webkit-transition: 0.9s;
+          -o-transition: 0.9s;
+          transition: 0.9s;
+        }
+  
+        h5 {
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          -webkit-transition: 0.8s;
+          -o-transition: 0.8s;
+          transition: 0.8s;
+        }
+      }
+    }
+  
+    .hobby {
+      margin: auto;
+      h5 {
+        font-size: 1.2em;
+        -webkit-transform: translateY(-100vh);
+            -ms-transform: translateY(-100vh);
+                transform: translateY(-100vh)    
+      }
+      p {
+        font-size: 1em;
+        -webkit-transform: translateY(100vh);
+            -ms-transform: translateY(100vh);
+                transform: translateY(100vh);
+      }
+    }
+    
+    
+  }
+
+
+  @media screen and (max-width: 750px) {
+    .wrapper_hobby{
+      width: 150%;
+    }
+  }

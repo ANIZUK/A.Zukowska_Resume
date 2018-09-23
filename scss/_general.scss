@@ -41,12 +41,6 @@ $mainColors: (
     box-shadow:	0px 0px 20px $color;
   }
   
-  @mixin borderRadius {
-    -moz-border-radius: 50px;
-        -webkit-border-radius: 50px;
-        border-radius: 50px;
-  }
-  
   
   @mixin ligthen {
     color: lighten($color, 80%);
@@ -58,5 +52,13 @@ $mainColors: (
     background-color: white;
   
 }
+
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet {
+    @media (max-width: 900px) { @content; }
+  }
 
 
