@@ -104,13 +104,20 @@
   ==================================== */
 
   @media screen and (max-width: 992px) {
+    .section-3{
+        background-image: url('../images/beetle_green.png');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: cover;
+        background-attachment: fixed; 
+        height: 100vh;
       .CV_wrapper{
         [class*=col-] {
             // margin-left: -4%;
             width: 150%;
         }  
       }
-   
+    }
    }
  
 

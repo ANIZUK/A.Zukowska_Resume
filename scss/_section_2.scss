@@ -137,6 +137,10 @@ height: 60%;
  
 }
 @media screen and (max-width: 550px) {
+    #section-2{
+        background-position-x: center;
+        background-size: cover;
+    }
     .games_wrapper {
         margin-top: 10vh;
     } 

@@ -51,3 +51,40 @@
   border-radius: 6px;
 }
 
+
+
+
+
+
+/* Media queries  */
+@media screen and (max-width: 600px) {
+
+  .timeline::after {
+    left: 31px;
+  }
+  .content {
+    font-size: 1rem;
+    padding: 5px 80px;
+  }
+  
+  .work_container{
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+ 
+  .work_container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+
+  .right {
+    left: 0%;
+  }
+}

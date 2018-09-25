@@ -137,7 +137,7 @@ Section-1: media query
       -webkit-box-align: baseline;
       -ms-flex-align: baseline;
       align-items: baseline;
-      padding-top: 200px; }
+      padding-top: 130px; }
     #section-1 .main-banner-title {
       width: 100%; } }
 
@@ -243,14 +243,11 @@ Section-1: nav: media query
     padding-left: 8%;
     padding-top: 10vh; }
   nav li:nth-of-type(2) {
-    background-size: 800%;
-    background-position-y: 52vh; }
+    background-position-y: 60vh; }
   nav li:nth-of-type(3) {
-    background-size: 800%;
-    background-position-y: 52vh; }
+    background-position-y: 60vh; }
   nav li:nth-of-type(4) {
-    background-size: 800%;
-    background-position-y: 52vh; } }
+    background-position-y: 60vh; } }
 
 /* ====================================
   Section -2
@@ -368,6 +365,9 @@ Section-1: nav: media query
     font-size: 0.7rem; } }
 
 @media screen and (max-width: 550px) {
+  #section-2 {
+    background-position-x: center;
+    background-size: cover; }
   .games_wrapper {
     margin-top: 10vh; } }
 
@@ -462,8 +462,15 @@ Section-1: nav: media query
  Section-3-education - media-query
   ==================================== */
 @media screen and (max-width: 992px) {
-  .CV_wrapper [class*=col-] {
-    width: 150%; } }
+  .section-3 {
+    background-image: url("../images/beetle_green.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; }
+    .section-3 .CV_wrapper [class*=col-] {
+      width: 150%; } }
 
 /* ====================================
   Education
@@ -586,6 +593,27 @@ Section-1: nav: media query
   background-color: #158a36;
   position: relative;
   border-radius: 6px; }
+
+/* Media queries  */
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px; }
+  .content {
+    font-size: 1rem;
+    padding: 5px 80px; }
+  .work_container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px; }
+  .work_container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent; }
+  .left::after, .right::after {
+    left: 15px; }
+  .right {
+    left: 0%; } }
 
 /* ====================================
  Section-3: Skills
