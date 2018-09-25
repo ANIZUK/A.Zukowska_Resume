@@ -4,46 +4,46 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 // array with pictures
 const cardsArray = [{
-      'img': './images/image1.png',
-      'number': '1'
-    },
-    {
-      'img': './images/image2.png',
-      'number': '2'
-    },
-    {
-      'img': './images/image3.png',
-      'number': '3'
-    },
-    {
-      'img': './images/image4.png',
-      'number': '4'
-    },
-    {
-      'img': './images/image5.png',
-      'number': '5'
-    },
-    {
-      'img': './images/image6.png',
-      'number': '6'
-    },
-    {
-      'img': './images/image7.png',
-      'number': '7'
-    },
-    {
-      'img': './images/image8.png',
-      'number': '8'
-    },
-    {
-      'img': './images/image9.png',
-      'number': '9'
-    },
-    {
-      'img': './images/image10.png',
-      'number': '10'
-    },
-  ];
+  'img': 'https://i.postimg.cc/k5dQrttx/image1.png',
+  'number': '1'
+},
+{
+  'img': 'https://i.postimg.cc/SN3LrPS1/image2.png',
+  'number': '2'
+},
+{
+  'img': 'https://i.postimg.cc/2SWQXx3k/image3.png',
+  'number': '3'
+},
+{
+  'img': 'https://i.postimg.cc/NGNkyMWc/image4.png',
+  'number': '4'
+},
+{
+  'img': 'https://i.postimg.cc/NFP6ZJ1M/image5.png',
+  'number': '5'
+},
+{
+  'img': 'https://i.postimg.cc/1tBcr5XD/image6.png',
+  'number': '6'
+},
+{
+  'img': 'https://i.postimg.cc/SRKLTFY3/image7.png',
+  'number': '7'
+},
+{
+  'img': 'https://i.postimg.cc/ydsyRS1V/image8.png',
+  'number': '8'
+},
+{
+  'img': 'https://i.postimg.cc/vmWvDvdq/image9.png',
+  'number': '9'
+},
+{
+  'img': "https://i.postimg.cc/8PjBLGSr/image10.png",
+  'number': '10'
+},
+];
 
 //creating duplicates of images and shuffling them
 const gameGrid = cardsArray

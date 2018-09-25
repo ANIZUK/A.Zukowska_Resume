@@ -109,7 +109,7 @@ $(document).ready(function () {
 		
 		  
 		// Play
-const play = function () {
+function play() {
 
 createAlphabet();
 
